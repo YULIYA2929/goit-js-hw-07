@@ -24,3 +24,12 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+
+const ImageEl = document.createElement("img");
+const LiEl = document.querySelector("li");
+ImageEl.src = "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260";
+ImageEl.alt = "White and Black Long Fur Cat";
+console.log(ImageEl);
+LiEl.append(ImageEl);
+console.log(ImageEl);

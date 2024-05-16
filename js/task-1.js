@@ -1,4 +1,8 @@
-const listWithId = document.querySelector(".item");
+const categoriesEl = document.getElementById('categories').children.length;
+console.log(`Number of categories: ${categoriesEl}`);
 
-console.log(listWithId);
-console.log(`Number of categories: ${listWithId.length}`);
+const arrayTitlesCategoriesRef = document.querySelectorAll('h2');
+arrayTitlesCategoriesRef.forEach((title) => {
+  console.log('Category:', title.textContent);
+  console.log('Elements:', title.nextElementSibling.children.length);
+});
