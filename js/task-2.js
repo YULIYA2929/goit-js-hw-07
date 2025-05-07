@@ -25,7 +25,7 @@ const images = [
   }
 ];
 
-const heroEl = document.querySelector('ul'); 
+const heroEl = document.querySelector('li'); 
 const imageEl = document.createElement('img');
 
 imageEl.src = 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg';
