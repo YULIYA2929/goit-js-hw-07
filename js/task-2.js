@@ -25,11 +25,17 @@ const images = [
   }
 ];
 
-const heroEl = document.querySelector('li'); 
-const imageEl = document.createElement('img');
+const galleryEl = document.querySelector('.gallery');
 
-imageEl.src = 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg';
-imageEl.alt = 'Alpine Spring Meadows';
-imageEl.width = 300;
-console.log(imageEl);
-heroEl.append(imageEl);
+
+const markup = images
+  .map(({ url, alt }) => {
+    return `<li class="gallery-item">
+              <img src="${url}" alt="${alt}" width="300">
+            </li>`;
+  })
+  .join('');
+
+
+galleryEl.insertAdjacentHTML('beforeend', markup);
+
